@@ -67,5 +67,9 @@ def init():
         elif(dispWidth < MIN_WIDTH):
             dispWidth = MIN_WIDTH
         
+    f = open("confs.json", "w")
+    f.write(json.dumps({"height":dispHeight, "width":dispWidth}))
+    f.close()
+    
 if(__name__ == "__main__"):
     init()
